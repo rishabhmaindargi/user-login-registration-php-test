@@ -20,40 +20,40 @@
 
 			<form method="post">
 				<input type="text" class="fadeIn second" id="username" name="username" placeholder="Enter Username" required />
-				<input type="text" class="fadeIn third" id="password" name="password" placeholder="Enter Password" required />
+				<input type="password" class="fadeIn third" id="password" name="password" placeholder="Enter Password" required />
 				<input type="submit" class="fadeIn fourth" value="Add User" name="register" id="register" />
 			</form>
 
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$('#register').click(function() {
+						var username = $('#username').val();
+						var password = $('#password').val();
+
+						$.ajax({
+							url: 'ajax-call.php',
+							type: 'post',
+							data: {
+								username: username, 
+								password: password
+							},
+
+							success:function(response) {
+								if ( response == 'success' ) {
+									window.alert('User added successfully.');
+									window.location.href = 'login.php';
+								} else {
+									window.alert('Error ocurred. Please try again.');
+									window.location.href = 'registration.php';
+								}
+							}
+						})
+					})
+				});
+			</script>
+
 			</div>
 		</div>
-
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$('#register').click(function() {
-					var username = $('#username').val();
-					var password = $('#password').val();
-
-					$.ajax({
-						url: 'ajax-call.php',
-						type: 'post',
-						data: {
-							username: username,
-							password: password
-						},
-
-						success:function(respone) {
-							if ( respone == 'success' ) {
-								window.alert('User added successfully.');
-								window.location.href = 'login-page.php';
-							} else {
-								window.alert('Error ocurred. Please try again.');
-								window.location.href = 'registration.php';
-							}
-						}
-					})
-				})
-			});
-		</script>
 
 	</body>
 </html>

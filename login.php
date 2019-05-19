@@ -44,7 +44,7 @@
 
 			<form method="post">
 				<input type="text" class="fadeIn second" name="username" placeholder="Enter Username" required />
-				<input type="text" class="fadeIn third" name="password" placeholder="Enter Password" required />
+				<input type="password" class="fadeIn third" name="password" placeholder="Enter Password" required />
 				<input type="submit" class="fadeIn fourth" value="Log In" name="login" />
 			</form>
 
