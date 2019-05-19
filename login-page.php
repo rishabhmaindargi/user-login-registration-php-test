@@ -1,6 +1,6 @@
 <?php
 
-	$db_connection = mysqli_connect( "localhost", "root", "", "login" );
+	// $db_connection = mysqli_connect( "localhost", "root", "", "login" );
 
 	if ( isset( $_POST["login_btn"] ) ) {
 
@@ -25,32 +25,34 @@
 	<head>
 		<title> Login Page </title>
 
-		<link href="login-style.css" rel="stylesheet" id="login-css">
+		<link href="style.css" rel="stylesheet" id="login-css">
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	</head>
 	<body>
 
 		<div class="wrapper fadeInDown">
-		  <div id="formContent">
+		  	<div id="formContent">
 		    
-			<div class="fadeIn first">
-		    	<img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-		    	<h4 class="page-title">Login Page</h4>
-		    </div>
+				<div class="fadeIn first">
+			    	<i class="fas fa-user-circle"></i>
+			    	<h4 class="page-title">My Account</h4>
+			    </div>
 
+			    <div class="form-content">
+					<form class="form-fields" method="post">
+						<input type="text" class="fadeIn second" name="username" placeholder="Enter Username" />
+						<input type="password" class="fadeIn third" name="password" placeholder="Enter Password" />
+						<input type="submit" class="fadeIn fourth" value="Log In" name="login_btn" />
+					</form>
 
-			<form method="post">
-				<input type="text" class="fadeIn second" name="username" placeholder="Enter Username" />
-				<input type="text" class="fadeIn third" name="password" placeholder="Enter Password" />
-				<input type="submit" class="fadeIn fourth" value="Log In" name="login_btn" />
-			</form>
-
-			<div id="formFooter">
-				<a class="underlineHover" href="#">Forgot Password?</a>
-			</div>
-
+					<div id="formFooter">
+						<a class="underlineHover" href="#">Forgot Password?</a>
+					</div>
+				</div>
 			</div>
 		</div>
 
