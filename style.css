@@ -124,12 +124,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
     transform: scale(0.95);
 }
 
-<<<<<<< HEAD:style.css
 input[type=text], input[type=password] {
-=======
-input[type=text],
-input[type=password] {
->>>>>>> d00ba711f84f42a592afa0ba5d38b87dd54e9f18:login-style.css
     background-color: #f6f6f6;
     color: #0d0d0d;
     padding: 15px 32px;
@@ -148,20 +143,12 @@ input[type=password] {
     border-radius: 5px 5px 5px 5px;
 }
 
-<<<<<<< HEAD:style.css
 input[type=text]:focus, input[type=password]:focus {
     background-color: #ffffff;
     border-bottom: 2px solid #0062cc;
-=======
-input[type=text]:focus,
-input[type=password]:focus {
-    background-color: #fff;
-    border-bottom: 2px solid #5fbae9;
->>>>>>> d00ba711f84f42a592afa0ba5d38b87dd54e9f18:login-style.css
 }
 
-input[type=text]:placeholder,
-input[type=password]:placeholder {
+input[type=text]:placeholder {
     color: #cccccc;
     font-size: 15px;
 }
