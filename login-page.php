@@ -2,12 +2,14 @@
 
 	$db_connection = mysqli_connect( "localhost", "root", "", "login" );
 
-	if ( isset( $_POST["login_btn"] ) ) {
+	if ( isset( $_POST["login"] ) ) {
 
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 
-		$sql_query = "select * from users where username='". $username ."' and password='". $password ."'";
+		$encrypted_pwd = md5($password);
+
+		$sql_query = "select * from users where username='". $username ."' and password='". $encrypted_pwd ."'";
 
 		$users_data_result = mysqli_query( $db_connection, $sql_query );
 
@@ -27,7 +29,6 @@
 
 		<link href="login-style.css" rel="stylesheet" id="login-css">
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 	<body>
@@ -42,9 +43,9 @@
 
 
 			<form method="post">
-				<input type="text" class="fadeIn second" name="username" placeholder="Enter Username" />
-				<input type="text" class="fadeIn third" name="password" placeholder="Enter Password" />
-				<input type="submit" class="fadeIn fourth" value="Log In" name="login_btn" />
+				<input type="text" class="fadeIn second" name="username" placeholder="Enter Username" required />
+				<input type="text" class="fadeIn third" name="password" placeholder="Enter Password" required />
+				<input type="submit" class="fadeIn fourth" value="Log In" name="login" />
 			</form>
 
 			<div id="formFooter">
@@ -55,4 +56,4 @@
 		</div>
 
 	</body>
-</html> 
+</html>
