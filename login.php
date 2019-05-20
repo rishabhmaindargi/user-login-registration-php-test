@@ -16,7 +16,7 @@
 		if ( ( mysqli_num_rows( $users_data_result ) > 0 ) || ( 'admin' == $username && 'admin' == $password ) ) {
 			echo "<script> window.location.href='registration.php'; </script>";
 		} else {
-			echo "<script>window.alert('Invalid Username or Password'); window.location.href='login-page.php';</script>";
+			echo "<script>window.alert('Invalid Username or Password'); window.location.href='login.php';</script>";
 		}
 	}
 
