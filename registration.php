@@ -3,8 +3,9 @@
 	<head>
 		<title> Registration Page </title>
 
-		<link href="login-style.css" rel="stylesheet" id="login-css">
-		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<link href="style.css" rel="stylesheet" id="login-css"/>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" id="fontawesome-css"/>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 	<body>
@@ -12,10 +13,10 @@
 		<div class="wrapper fadeInDown">
 		  <div id="formContent">
 
-			<div class="fadeIn first">
-				<img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-				<h4 class="page-title">Registration Page</h4>
-			</div>
+		  		<div class="fadeIn first">
+			    	<i class="fas fa-user-circle"></i>
+			    	<h4 class="page-title">Registration</h4>
+			    </div>
 
 
 			<form method="post">
