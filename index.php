@@ -1,22 +1,24 @@
 <?php
 
+	session_start();
+
 	include('db-connection.php');
 
-	if ( isset( $_POST["login"] ) ) {
+	if ( isset( $_POST["login_btn"] ) ) {
 
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 
-		$encrypted_pwd = md5($password);
+		$encrypted_pwd = md5( $password );
 
 		$sql_query = "select * from users where username='". $username ."' and password='". $encrypted_pwd ."'";
 
 		$users_data_result = mysqli_query( $db_connection, $sql_query );
 
 		if ( ( mysqli_num_rows( $users_data_result ) > 0 ) || ( 'admin' == $username && 'admin' == $password ) ) {
-			echo "<script> window.location.href='registration.php'; </script>";
+			echo "<script> window.location.href='cms-admin/admin.php'; </script>";
 		} else {
-			echo "<script>window.alert('Invalid Username or Password'); window.location.href='login.php';</script>";
+			echo "<script>window.alert('Invalid Username or Password'); window.location.href='index.php';</script>";
 		}
 	}
 
@@ -27,10 +29,12 @@
 	<head>
 		<title> Login Page </title>
 
-		<link href="style.css" rel="stylesheet" id="login-css"/>
+		<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" id="fontawesome-css"/>
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link href="style.css" rel="stylesheet" id="portal-css"/>
+
 	</head>
 	<body>
 
