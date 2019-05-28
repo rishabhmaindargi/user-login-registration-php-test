@@ -1,7 +1,6 @@
 <?php
 
-$db_connection = mysqli_connect( "localhost", "root", "", "login" );
-
+include('db-connection.php');
 $output = '';
 
 if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
