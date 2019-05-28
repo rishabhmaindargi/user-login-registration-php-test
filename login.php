@@ -1,6 +1,6 @@
 <?php
 
-	// $db_connection = mysqli_connect( "localhost", "root", "", "login" );
+	include('db-connection.php');
 
 	if ( isset( $_POST["login_btn"] ) ) {
 
