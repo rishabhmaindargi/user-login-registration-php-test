@@ -54,6 +54,8 @@
 					</form>
 
 					<div id="formFooter">
+						<a class="underlineHover" href="registration.php">Register Now</a>
+						<span class="divide">|</span>
 						<a class="underlineHover" href="#">Forgot Password?</a>
 					</div>
 				</div>
